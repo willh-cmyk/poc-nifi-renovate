@@ -17,8 +17,7 @@
                 "ARG NIFI_VERSION=(?<currentValue>[\\d\\.]+[-\\w]*)"
             ],
             "datasourceTemplate": "apache-nifi",
-            "depNameTemplate": "apache/nifi",
-            "versioningTemplate": "npm"
+            "depNameTemplate": "apache/nifi"
         }
     ],
     "postUpgradeTasks": {
