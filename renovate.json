@@ -1,12 +1,12 @@
 {
-    "customDatasources": [
-        {
-            "name": "apache-nifi",
-            "url": "http://localhost:3000/nifi-latest-version",
-            "versioning": "semver",
-            "depName": "apache/nifi"
+    "customDatasources": {
+        "apache-nifi": {
+            "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version",
+            "transformTemplates": [
+                "$.version"
+            ]
         }
-    ],
+    },
     "regexManagers": [
         {
             "fileMatch": [
@@ -20,12 +20,13 @@
             "versioningTemplate": "semver"
         }
     ],
-    "postUpgradeTasks": [
-        {
-            "fileFilter": [
-                "Dockerfile"
-            ],
-            "command": "./update-checksum.sh"
-        }
-    ]
+    "postUpgradeTasks": {
+        "fileFilters": [
+            "Dockerfile"
+        ],
+        "commands": [
+            "./update-checksum.sh"
+        ],
+        "executionMode": "update"
+    }
 }
