@@ -1,10 +1,7 @@
 {
     "customDatasources": {
         "apache-nifi": {
-            "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version",
-            "transformTemplates": [
-                "$.version"
-            ]
+            "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version"
         }
     },
     "customManagers": [
