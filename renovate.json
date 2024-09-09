@@ -1,0 +1,31 @@
+{
+    "customDatasources": [
+        {
+            "name": "apache-nifi",
+            "url": "https://your-deployed-server-url.com/nifi-latest-version",
+            "versioning": "semver",
+            "depName": "apache/nifi"
+        }
+    ],
+    "regexManagers": [
+        {
+            "fileMatch": [
+                "^Dockerfile$"
+            ],
+            "matchStrings": [
+                "NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+            ],
+            "datasourceTemplate": "apache-nifi",
+            "depNameTemplate": "apache/nifi",
+            "versioningTemplate": "semver"
+        }
+    ],
+    "postUpgradeTasks": [
+        {
+            "fileFilter": [
+                "Dockerfile"
+            ],
+            "command": "./update-checksum.sh"
+        }
+    ]
+}
