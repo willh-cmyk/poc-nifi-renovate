@@ -14,7 +14,7 @@
                 "^Dockerfile$"
             ],
             "matchStrings": [
-                "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+                "ARG NIFI_VERSION=(?<currentValue>[\\d\\.]+[-\\w]*)"
             ],
             "datasourceTemplate": "apache-nifi",
             "depNameTemplate": "apache/nifi",
