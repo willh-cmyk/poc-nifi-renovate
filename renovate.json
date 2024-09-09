@@ -7,8 +7,9 @@
             ]
         }
     },
-    "regexManagers": [
+    "customManagers": [
         {
+            "customType": "regex",
             "fileMatch": [
                 "^Dockerfile$"
             ],
@@ -28,5 +29,8 @@
             "./update-checksum.sh"
         ],
         "executionMode": "update"
-    }
+    },
+    "enabledManagers": [
+        "custom.regex"
+    ]
 }
