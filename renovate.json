@@ -2,7 +2,7 @@
     "customDatasources": [
         {
             "name": "apache-nifi",
-            "url": "https://your-deployed-server-url.com/nifi-latest-version",
+            "url": "http://localhost:3000/nifi-latest-version",
             "versioning": "semver",
             "depName": "apache/nifi"
         }
