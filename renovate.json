@@ -1,7 +1,8 @@
 {
     "customDatasources": {
         "apache-nifi": {
-            "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version"
+            "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version",
+            "transformTemplates": []
         }
     },
     "customManagers": [
@@ -13,8 +14,8 @@
             "matchStrings": [
                 "ARG NIFI_VERSION=(?<currentValue>[\\d\\.]+[-\\w]*)"
             ],
-            "datasourceTemplate": "apache-nifi",
-            "depNameTemplate": "apache/nifi"
+            "datasourceTemplate": "custom.apache-nifi",
+            "depNameTemplate": "apache-nifi"
         }
     ],
     "postUpgradeTasks": {
