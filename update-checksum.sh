@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Extract the NiFi version from the Dockerfile or relevant file
 VERSION=$(grep 'NIFI_VERSION=' Dockerfile | cut -d '=' -f 2 | tr -d '[:space:]')
