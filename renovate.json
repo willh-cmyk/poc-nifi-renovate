@@ -20,10 +20,11 @@
     ],
     "postUpgradeTasks": {
         "fileFilters": [
-            "Dockerfile"
+            "^Dockerfile$",
+            "^nifi-\\d.\\d.\\d-bin.zip.(asc|sha512)$"
         ],
         "commands": [
-            "./update-checksum.sh"
+            "update-checksum.sh"
         ],
         "executionMode": "update"
     },
