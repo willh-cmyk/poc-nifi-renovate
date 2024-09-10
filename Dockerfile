@@ -1,6 +1,6 @@
 FROM registry.access.redhat.com/ubi8/python-39
 
-ARG NIFI_VERSION=1.22.0
+ARG NIFI_VERSION=2.0.0
 
 ENV NIFI_BASE_DIR=/opt/nifi \
     NIFI_VERSION=${NIFI_VERSION}
