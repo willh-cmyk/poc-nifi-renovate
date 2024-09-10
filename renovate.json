@@ -21,7 +21,7 @@
     "postUpgradeTasks": {
         "fileFilters": [
             "^Dockerfile$",
-            "^nifi-\\d.\\d.\\d-bin.zip.(asc|sha512)$"
+            "^nifi-\\d+\\.\\d+\\.\\d+-bin\\.zip\\.(asc|sha512)$"
         ],
         "commands": [
             "update-checksum.sh"
