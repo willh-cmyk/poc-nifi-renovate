@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Extract the NiFi version from the Dockerfile or relevant file
-VERSION=$(grep 'NIFI_VERSION=' Dockerfile | cut -d '=' -f 2 | tr -d '[:space:]')
+VERSION=$(grep 'ARG NIFI_VERSION=' Dockerfile | cut -d '=' -f 2 | tr -d '[:space:]')
 
 if [ -z "$VERSION" ]; then
     echo "Error: Could not extract NIFI_VERSION from Dockerfile."
