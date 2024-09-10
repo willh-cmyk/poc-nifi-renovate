@@ -18,8 +18,7 @@
             "matchStrings": [
                 "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
             ],
-            "datasourceTemplate": "custom.apache-nifi",
-            "depNameTemplate": "apache-nifi"
+            "datasourceTemplate": "custom.apache-nifi"
         }
     ],
     "postUpgradeTasks": {
