@@ -25,10 +25,7 @@
     "postUpgradeTasks": {
         "fileFilters": [
             "Dockerfile",
-            "nifi-1.22.0-bin.zip.asc",
-            "nifi-1.27.0-bin.zip.asc",
-            "nifi-1.27.0-bin.zip.sha512",
-            "nifi-1.22.0-bin.zip.sha512"
+            "nifi-*-bin.zip.{asc,sha512}"
         ],
         "commands": [
             "./update-checksum.sh"
