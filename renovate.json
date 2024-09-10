@@ -1,4 +1,8 @@
 {
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:recommended"
+    ],
     "customDatasources": {
         "apache-nifi": {
             "defaultRegistryUrlTemplate": "http://localhost:3000/nifi-latest-version",
