@@ -5,7 +5,7 @@
     ],
     "customDatasources": {
         "apache-nifi": {
-            "defaultRegistryUrlTemplate": "http://127.0.0.1:8000/versions",
+            "defaultRegistryUrlTemplate": "http://127.0.0.1:8000/nifi/versions",
             "transformTemplates": []
         }
     },
