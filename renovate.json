@@ -12,7 +12,7 @@
                 "^Dockerfile$"
             ],
             "matchStrings": [
-                "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+(?:-[\\w.]+)?)"
+                "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+"
             ],
             "datasourceTemplate": "custom.apache-nifi",
             "depNameTemplate": "apache-nifi"
@@ -23,8 +23,7 @@
             "Dockerfile"
         ],
         "commands": [
-            "./update-checksum.sh",
-            "cat Dockerfile"
+            "./update-checksum.sh"
         ],
         "executionMode": "update"
     },
