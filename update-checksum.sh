@@ -8,6 +8,10 @@ if [ -z "$VERSION" ]; then
     exit 1
 fi
 
+# Delete old Checksum and PGP files
+find . -name 'nifi-/d+/d+/d+-bin.zip.(asc|sha512)' -delete
+ls
+
 # Set variables for checksum and PGP files
 SHA512_FILE_URL="https://archive.apache.org/dist/nifi/${VERSION}/nifi-${VERSION}-bin.zip.sha512"
 CHECKSUM_FILE="nifi-${VERSION}-bin.zip.sha512"
@@ -22,9 +26,4 @@ curl -L "$SHA512_FILE_URL" -o "$CHECKSUM_FILE"
 echo "Downloading PGP signature file for NiFi version $VERSION..."
 curl -L "$PGP_FILE_URL" -o "$PGP_FILE"
 
-# Commit and push changes
-git add "$CHECKSUM_FILE" "$PGP_FILE"
-git commit -m "Add SHA-512 checksum and PGP signature for NiFi version $VERSION"
-git push
-
-echo "Checksum and PGP signature files updated and committed successfully."
+echo "Checksum and PGP signature files updated successfully."
