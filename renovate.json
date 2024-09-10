@@ -23,8 +23,7 @@
             "Dockerfile"
         ],
         "commands": [
-            "./update-checksum.sh",
-            "cat Dockerfile"
+            "./update-checksum.sh"
         ],
         "executionMode": "update"
     },
