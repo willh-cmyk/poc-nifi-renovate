@@ -3,12 +3,6 @@
     "extends": [
         "config:recommended"
     ],
-    "customDatasources": {
-        "apache-nifi": {
-            "defaultRegistryUrlTemplate": "http://127.0.0.1:8000/nifi/versions",
-            "transformTemplates": []
-        }
-    },
     "customManagers": [
         {
             "customType": "regex",
@@ -16,9 +10,10 @@
                 "^Dockerfile$"
             ],
             "matchStrings": [
-                "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
+                "ARG OPENSEARCH_VERSION=(?<currentValue>.+?)\\s"
             ],
-            "datasourceTemplate": "custom.apache-nifi"
+            "datasourceTemplate": "github-tags",
+            "packageNameTemplate": "opensearch-project/OpenSearch"
         }
     ],
     "postUpgradeTasks": {
