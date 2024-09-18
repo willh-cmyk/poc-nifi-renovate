@@ -10,10 +10,10 @@
                 "^Dockerfile$"
             ],
             "matchStrings": [
-                "ARG OPENSEARCH_VERSION=(?<currentValue>.+?)\\s"
+                "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
             ],
             "datasourceTemplate": "github-tags",
-            "packageNameTemplate": "opensearch-project/OpenSearch"
+            "packageNameTemplate": "apache/nifi"
         }
     ],
     "postUpgradeTasks": {
