@@ -12,6 +12,7 @@
             "matchStrings": [
                 "ARG NIFI_VERSION=(?<currentValue>\\d+\\.\\d+\\.\\d+)"
             ],
+            "extractVersionTemplate": "^rel/nifi-(?<version>[0-9.]+)$",
             "datasourceTemplate": "github-tags",
             "packageNameTemplate": "apache/nifi"
         }
