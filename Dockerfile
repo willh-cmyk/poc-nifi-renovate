@@ -1,5 +1,9 @@
 FROM registry.access.redhat.com/ubi8/python-39
 
+ARG CUSTOM_DOCKERFILE_RUN
+ARG PRODUCT_VERSION=1.27.0
+ENV NIFI_BASE_FIR=/opt/nifi
+
 ARG NIFI_VERSION=1.22.0
 
 ENV NIFI_BASE_DIR=/opt/nifi \
